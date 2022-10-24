@@ -1,0 +1,72 @@
+body {
+    background-color: #EEF9BF;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .totoOSite {
+    width: 1140px;
+    padding: 0 15px;
+  }
+  .nomeDoJogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #75B79E;
+    font-weight: 700;
+    margin: 40px 0 30px 0;
+    text-align: center;
+  }
+  .cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .carta {
+    width: 117px;
+    height: 146px;
+    position: relative;
+    margin: 17px;
+    box-sizing: border-box;
+  }
+  .face {
+    width: 100%;
+    height: 100%;
+    background-color: #A7E9AF;
+    border:  1px solid #99CEA8;  
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  .face img {
+    width: 100%;
+    
+  }
+  .front-face {
+    transform: rotateY(180deg);
+  }
+  .carta.selecionado .front-face,
+  .carta.pares .front-face {
+    transform: rotateY(0deg);
+  }
+  .carta.selecionado .back-face,
+  .carta.pares .back-face {
+    transform: rotateY(-180deg);
+  }
+
+  @media all and (min-width: 768px) {
+    h1 {
+      font-size: 56px;
+    }
+  }
